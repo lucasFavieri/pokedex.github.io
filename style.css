@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+    font-weight: 400;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+main{
+    background-color: white;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.container{
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+/*------------------------------ Aux Classes --------------------------------------*/
+
+/*------------------------------ Header --------------------------------------*/
+
+header{
+    width: 100%;
+    background-color: #ef5350;
+    padding: 10px 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+header img{
+    width: 250px;
+    display: block;
+    margin: auto;  
+}
+
+/*------------------------------ Header --------------------------------------*/
+
+/*------------------------------ Pokemon Boxes --------------------------------------*/
+button{
+    padding: 20px 30px;
+    margin: 20px auto;
+    display: block;
+    font-size: 18px;
+    background-color: #1b82b1;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #14688e;
+}
+
+.button:active {
+    background-color: #14688e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.poke-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+    gap: 10px;
+    /* background-color: yellow; */
+}
+
+.poke-box-sgl{
+    width: 32%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* background-color: rebeccapurple; */
+}
+
+.poke-box-sgl.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.poke-box-sgl.initial {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.poke-img-box{
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.poke-box-sgl img{
+    width: 100%;
+    height: auto;
+}
+
+.poke-box-sgl p.name{
+    color: #333;
+    font-size: 33px;
+    /* background-color: white; */
+    margin-bottom: 5px;
+}
+
+.poke-box-sgl p.type{
+    font-size: 20px;
+}
+/*------------------------------ Pokemon Boxes --------------------------------------*/
+
+/*------------------------------ Media Screens --------------------------------------*/
+
+@media screen and (max-width: 1024px){
+    .poke-box-sgl{
+        width: 32%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .poke-box-sgl{
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .poke-box-sgl{
+        width: 100%;
+    }
+}
+
+/*------------------------------ Media Screens --------------------------------------*/
